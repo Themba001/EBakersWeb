@@ -1,0 +1,232 @@
+﻿/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f0f0; /* Baby pink background */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f9c6c9; /* Baby pink header */
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid #c6a0b1; /* Light pink border */
+}
+
+    header .logo {
+        width: 150px;
+        height: auto;
+    }
+
+    header h1 {
+        margin: 0;
+        color: #c6a0b1; /* Light pink text */
+    }
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    nav ul li {
+        display: inline;
+        margin: 0 1rem;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #5f9ea0; /* Teal for links */
+        }
+
+main {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #f9c6c9; /* Baby pink footer */
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+    footer p {
+        margin: 0;
+    }
+
+    footer .social-links {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        footer .social-links li {
+            display: inline;
+            margin: 0 0.5rem;
+        }
+
+        footer .social-links img {
+            width: 30px;
+            height: auto;
+        }
+
+/* Grid Layouts */
+.cakes-grid, .season-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+    .cakes-grid .cake, .season-grid .season {
+        text-align: center;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+        .cakes-grid .cake:hover, .season-grid .season:hover {
+            background-color: #f2d9e6; /* Light baby pink on hover */
+            cursor: pointer;
+        }
+
+        .cakes-grid .cake img, .season-grid .season img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+/* Forms */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+    form label {
+        display: block;
+        margin: 0.5rem 0 0.25rem;
+    }
+
+    form input, form select, form textarea, form button {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    form button {
+        background-color: #5f9ea0; /* Teal button */
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+        form button:hover {
+            background-color: #4a8a8e; /* Darker teal on hover */
+        }
+
+/* Header & Navigation Styles for Admin Pages */
+.admin-nav {
+    background-color: #f9c6c9; /* Baby pink */
+    padding: 1rem;
+    text-align: center;
+}
+
+    .admin-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+        .admin-nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
+
+            .admin-nav ul li a {
+                text-decoration: none;
+                color: #5f9ea0; /* Teal links */
+            }
+
+/* Cart Page */
+.cart table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.cart th, .cart td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.cart th {
+    background-color: #f9c6c9; /* Baby pink */
+}
+
+.cart .total {
+    font-weight: bold;
+}
+
+/* Customization Page */
+.customize {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+    .customize h2 {
+        text-align: center;
+    }
+
+/* Seasons Page */
+.season-page {
+    padding: 2rem;
+}
+
+    .season-page .cakes-grid {
+        margin: 0;
+    }
+
+/* Specific Page Styles */
+.about, .contact, .terms {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+    .about h2, .contact h2, .terms h2 {
+        text-align: center;
+    }
+
+/* Admin Page Styles */
+.admin-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+    .admin-page h2 {
+        text-align: center;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .cakes-grid, .season-grid {
+        grid-template-columns: 1fr;
+    }
+}

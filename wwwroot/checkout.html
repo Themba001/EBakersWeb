@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bakers | Checkout</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/Logo.jpeg" alt="E-Bakers Logo" class="logo">
+        <h1>Checkout</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="seasons.html">Seasons</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="login.html">Admin Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="checkout">
+            <h2>Checkout</h2>
+            <form id="checkoutForm">
+                <label for="deliveryOption">Delivery Option:</label>
+                <select id="deliveryOption" name="deliveryOption" required>
+                    <option value="collection">In-Store Collection</option>
+                    <option value="standard">Standard Delivery (3-5 days)</option>
+                    <option value="express">Express Delivery (1-2 days)</option>
+                </select>
+
+                <label for="address">Delivery Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="submit">Place Order</button>
+            </form>
+            <div id="orderSummary" style="display: none;">
+                <h3>Order Summary</h3>
+                <p>Order Number: <strong id="orderNumber">123456</strong></p>
+                <p>Total: R<span id="orderTotal">0.00</span></p>
+                <p>Delivery Fee: R50.00</p>
+                <p>Please finalize your payment using the order number as a reference.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 E-Bakers. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="#"><img src="images/facebook.jpg" alt="Facebook"></a></li>
+            <li><a href="#"><img src="images/twitter.jpg" alt="Twitter"></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+        </ul>
+    </footer>
+    <script src="js/checkout.js"></script>
+</body>
+</html>

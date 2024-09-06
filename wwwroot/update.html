@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Bakers | Update Order</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/Logo.jpeg" alt="E-Bakers Logo" class="logo">
+        <h1>Update Order</h1>
+        <nav>
+            <ul>
+                <li><a href="login.html">Admin Login</a></li>
+                <li><a href="orders.html">Orders</a></li>
+                <li><a href="update.html">Update Order</a></li>
+                <li><a href="cancel.html">Cancel Order</a></li>
+                <li><a href="approve.html">Approve Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Update Order Details</h2>
+        <form id="updateOrderForm">
+            <label for="orderId">Order ID:</label>
+            <input type="text" id="orderId" name="orderId" required>
+
+            <label for="orderStatus">Status:</label>
+            <select id="orderStatus" name="orderStatus" required>
+                <option value="pending">Pending</option>
+                <option value="processing">Processing</option>
+                <option value="completed">Completed</option>
+                <option value="cancelled">Cancelled</option>
+            </select>
+
+            <button type="submit">Update Order</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 E-Bakers. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="#"><img src="images/facebook.jpg" alt="Facebook"></a></li>
+            <li><a href="#"><img src="images/twitter.jpg" alt="Twitter"></a></li>
+            <li><a href="#"><img src="images/instagram.png" alt="Instagram"></a></li>
+        </ul>
+    </footer>
+    <script src="js/update.js"></script>
+
+</body>
+</html>
