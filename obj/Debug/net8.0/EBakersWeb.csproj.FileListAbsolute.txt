@@ -1,0 +1,7 @@
+C:\EBakersWeb\obj\Debug\net8.0\EBakersWeb.csproj.AssemblyReference.cache
+C:\EBakersWeb\obj\Debug\net8.0\EBakersWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\EBakersWeb\obj\Debug\net8.0\EBakersWeb.AssemblyInfoInputs.cache
+C:\EBakersWeb\obj\Debug\net8.0\EBakersWeb.AssemblyInfo.cs
+C:\EBakersWeb\obj\Debug\net8.0\EBakersWeb.csproj.CoreCompileInputs.cache
+C:\EBakersWeb\obj\Debug\net8.0\EBakersWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\EBakersWeb\obj\Debug\net8.0\EBakersWeb.sourcelink.json
