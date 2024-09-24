@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EBakersWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e796f7c6180a09d864819ebd9aa46e5c964dc413")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d70fbee0f7091c242e339d4714768d9ccac126a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EBakersWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EBakersWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

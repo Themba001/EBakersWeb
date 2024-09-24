@@ -6,7 +6,7 @@
     const password = document.getElementById('adminPassword').value;
 
     // Send the login data to the API
-    fetch('https://localhost:7181/api/admin/login', {
+    fetch('http://localhost:5011/api/AdminLogin/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -16,18 +16,33 @@
             password: password
         })
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            // Redirect or show success message
-            window.location.href = 'index.html';
-
-            
-        } else {
-            alert('Invalid username or password');
+    .then(response => {
+        if (!response.ok) {
+            // Handle error response
+            return response.json().then(data => {
+                throw new Error(data.message || 'Network response was not ok');
+            });
         }
+        return response.json();
+    })
+    .then(data => {
+        // Show success message using SweetAlert
+        Swal.fire({
+            icon: 'success',
+            title: 'Login Successful',
+            text: data.message
+        }).then(() => {
+            // Redirect after the alert is closed
+            window.location.href = 'index.html';
+        });
     })
     .catch(error => {
+        // Show SweetAlert for error
+        Swal.fire({
+            icon: 'error',
+            title: 'Login Failed',
+            text: error.message || 'Invalid username or password'
+        });
         console.error('Error:', error);
     });
 });
