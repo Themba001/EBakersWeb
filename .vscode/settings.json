@@ -1,0 +1,10 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "name": "MABUZA/SQLEXPRESS",
+      "database": "C:\\Users\\use\\Documents\\My Data Sources\\taxdata Data$.od.odc"
+    }
+  ]
+}

@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Bakers | Seasons</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Grayed-out effect for out-of-season cakes */
+        .disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,25 +33,25 @@
     <main>
         <section class="season-grid">
             <h2>Select a Season</h2>
-            <div class="season">
+            <div id="summer" class="season">
                 <a href="summer.html">
                     <img src="images/sm.jpg" alt="Summer Cakes">
                     <p>Summer Cakes</p>
                 </a>
             </div>
-            <div class="season">
+            <div id="autumn" class="season">
                 <a href="autumn.html">
                     <img src="images/a.jpg" alt="Autumn Cakes">
                     <p>Autumn Cakes</p>
                 </a>
             </div>
-            <div class="season">
+            <div id="winter" class="season">
                 <a href="winter.html">
                     <img src="images/w.jpg" alt="Winter Cakes">
                     <p>Winter Cakes</p>
                 </a>
             </div>
-            <div class="season">
+            <div id="spring" class="season">
                 <a href="spring.html">
                     <img src="images/sp.jpg" alt="Spring Cakes">
                     <p>Spring Cakes</p>
@@ -60,6 +67,35 @@
             <li><a href="#"><img src="images/Instagram.jpg" alt="Instagram"></a></li>
         </ul>
     </footer>
-    <script src="scripts.js"></script>
+    <script>
+        // Get the current month
+        const currentMonth = new Date().getMonth() + 1;
+
+        // Function to determine the current season
+        function getCurrentSeason(month) {
+            if (month >= 12 || month <= 2) {
+                return 'summer'; 
+            } else if (month >= 3 && month <= 5) {
+                return 'autumn';  // March, April, May
+            } else if (month >= 6 && month <= 8) {
+                return 'winter';  // June, July, August
+            } else if (month >= 9 && month <= 11) {
+                return 'spring';  // September, October, November
+            }
+        }
+
+        // Set the current season
+        const currentSeason = getCurrentSeason(currentMonth);
+
+        // Disable out-of-season cakes
+        const seasons = ['summer', 'autumn', 'winter', 'spring'];
+
+        seasons.forEach(season => {
+            if (season !== currentSeason) {
+                const seasonElement = document.getElementById(season);
+                seasonElement.classList.add('disabled');  // Apply gray-out effect
+            }
+        });
+    </script>
 </body>
 </html>

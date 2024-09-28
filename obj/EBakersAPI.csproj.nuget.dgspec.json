@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\EBakersWeb\\EBakersWeb.csproj": {}
+    "C:\\EBakersWeb\\EBakersAPI\\EBakersAPI.csproj": {}
   },
   "projects": {
-    "C:\\EBakersWeb\\EBakersWeb.csproj": {
+    "C:\\EBakersWeb\\EBakersAPI\\EBakersAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\EBakersWeb\\EBakersWeb.csproj",
-        "projectName": "EBakersWeb",
-        "projectPath": "C:\\EBakersWeb\\EBakersWeb.csproj",
+        "projectUniqueName": "C:\\EBakersWeb\\EBakersAPI\\EBakersAPI.csproj",
+        "projectName": "EBakersAPI",
+        "projectPath": "C:\\EBakersWeb\\EBakersAPI\\EBakersAPI.csproj",
         "packagesPath": "C:\\Users\\use\\.nuget\\packages\\",
-        "outputPath": "C:\\EBakersWeb\\obj\\",
+        "outputPath": "C:\\EBakersWeb\\EBakersAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\use\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -46,6 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.8, )"
@@ -59,6 +63,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.8, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
