@@ -14,15 +14,15 @@ header {
     border-bottom: 2px solid #c6a0b1; /* Light pink border */
 }
 
-    header .logo {
-        width: 150px;
-        height: auto;
-    }
+header .logo {
+    width: 150px;
+    height: auto;
+}
 
-    header h1 {
-        margin: 0;
-        color: #c6a0b1; /* Light pink text */
-    }
+header h1 {
+    margin: 0;
+    color: #c6a0b1; /* Light pink text */
+}
 
 nav ul {
     list-style-type: none;
@@ -30,15 +30,32 @@ nav ul {
     margin: 0;
 }
 
-    nav ul li {
-        display: inline;
-        margin: 0 1rem;
-    }
+nav ul li {
+    display: inline-block;
+    margin: 0 1rem;
+    position: relative;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: #5f9ea0; /* Teal for links */
-        }
+nav ul li a {
+    text-decoration: none;
+    color: #5f9ea0; /* Teal for links */
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #f2d9e6; /* Light pink on hover */
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Highlight the current page */
+nav ul li.current a {
+    background-color: #5f9ea0; /* Teal background for the current page */
+    color: #fff;
+    font-weight: bold;
+}
 
 main {
     padding: 2rem;
@@ -51,25 +68,25 @@ footer {
     margin-top: 2rem;
 }
 
-    footer p {
-        margin: 0;
-    }
+footer p {
+    margin: 0;
+}
 
-    footer .social-links {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+footer .social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-        footer .social-links li {
-            display: inline;
-            margin: 0 0.5rem;
-        }
+footer .social-links li {
+    display: inline;
+    margin: 0 0.5rem;
+}
 
-        footer .social-links img {
-            width: 30px;
-            height: auto;
-        }
+footer .social-links img {
+    width: 30px;
+    height: auto;
+}
 
 /* Grid Layouts */
 .cakes-grid, .season-grid {
@@ -79,24 +96,25 @@ footer {
     margin: 2rem 0;
 }
 
-    .cakes-grid .cake, .season-grid .season {
-        text-align: center;
-        padding: 1rem;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        background-color: #fff;
-    }
+.cakes-grid .cake, .season-grid .season {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
 
-        .cakes-grid .cake:hover, .season-grid .season:hover {
-            background-color: #f2d9e6; /* Light baby pink on hover */
-            cursor: pointer;
-        }
+.cakes-grid .cake:hover, .season-grid .season:hover {
+    background-color: #f2d9e6; /* Light baby pink on hover */
+    cursor: pointer;
+}
 
-        .cakes-grid .cake img, .season-grid .season img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
+.cakes-grid .cake img, .season-grid .season img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
 /* Forms */
 form {
@@ -104,30 +122,31 @@ form {
     margin: 0 auto;
 }
 
-    form label {
-        display: block;
-        margin: 0.5rem 0 0.25rem;
-    }
+form label {
+    display: block;
+    margin: 0.5rem 0 0.25rem;
+}
 
-    form input, form select, form textarea, form button {
-        display: block;
-        width: 100%;
-        margin-bottom: 1rem;
-        padding: 0.5rem;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-    }
+form input, form select, form textarea, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
 
-    form button {
-        background-color: #5f9ea0; /* Teal button */
-        color: #fff;
-        border: none;
-        cursor: pointer;
-    }
+form button {
+    background-color: #5f9ea0; /* Teal button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-        form button:hover {
-            background-color: #4a8a8e; /* Darker teal on hover */
-        }
+form button:hover {
+    background-color: #4a8a8e; /* Darker teal on hover */
+}
 
 /* Header & Navigation Styles for Admin Pages */
 .admin-nav {
@@ -136,21 +155,21 @@ form {
     text-align: center;
 }
 
-    .admin-nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+.admin-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
-        .admin-nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
+.admin-nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
 
-            .admin-nav ul li a {
-                text-decoration: none;
-                color: #5f9ea0; /* Teal links */
-            }
+.admin-nav ul li a {
+    text-decoration: none;
+    color: #5f9ea0; /* Teal links */
+}
 
 /* Cart Page */
 .cart table {
@@ -179,18 +198,18 @@ form {
     margin: 0 auto;
 }
 
-    .customize h2 {
-        text-align: center;
-    }
+.customize h2 {
+    text-align: center;
+}
 
 /* Seasons Page */
 .season-page {
     padding: 2rem;
 }
 
-    .season-page .cakes-grid {
-        margin: 0;
-    }
+.season-page .cakes-grid {
+    margin: 0;
+}
 
 /* Specific Page Styles */
 .about, .contact, .terms {
@@ -202,9 +221,9 @@ form {
     border: 1px solid #ddd;
 }
 
-    .about h2, .contact h2, .terms h2 {
-        text-align: center;
-    }
+.about h2, .contact h2, .terms h2 {
+    text-align: center;
+}
 
 /* Admin Page Styles */
 .admin-page {
@@ -216,9 +235,9 @@ form {
     border: 1px solid #ddd;
 }
 
-    .admin-page h2 {
-        text-align: center;
-    }
+.admin-page h2 {
+    text-align: center;
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

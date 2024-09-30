@@ -33,7 +33,7 @@
             text: data.message
         }).then(() => {
             // Redirect after the alert is closed
-            window.location.href = 'index.html';
+            window.location.href = 'approve.html';
         });
     })
     .catch(error => {
