@@ -6,8 +6,6 @@
     <title>E-Bakers | Customize Cake</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    
 </head>
 <body>
     <header>
@@ -55,12 +53,14 @@
 
             <label for="color">Icing Color:</label>
             <input type="color" id="color" name="color" value="#ffffff">
+            <button type="button" id="colorHelp">?</button> <!-- Help button for color -->
 
             <label for="vegan">Vegan Option:</label>
             <input type="checkbox" id="vegan" name="vegan">
 
             <label for="picture">Upload Picture (if any):</label>
             <input type="file" id="picture" name="picture">
+            <button type="button" id="pictureHelp">?</button> <!-- Help button for picture upload -->
 
             <button type="submit">Submit Customization</button>
         </form>

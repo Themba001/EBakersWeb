@@ -69,53 +69,7 @@
             }).then((result) => {
                 if (result.isConfirmed) {
                     // Send order to backend
-                    const orderData = {
-                        CustomerId: 1, // Assuming CustomerId is 1 for now, you can replace this with real customer data.
-                        TotalAmount: parseFloat(cartTotal.textContent.replace('R', '')),
-                        CartItems: cartItems // Sending the items ordered
-                    };
-
-                    fetch('http://localhost:5011/api/orders', {
-                        // Correct API endpoint
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(orderData)
-                    })
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error('Network response was not ok');
-                        }
-                        return response.json();
-                    })
-                    .then(data => {
-                        if (data.message === "Order stored successfully") {
-                            Swal.fire({
-                                title: 'Checkout Successful',
-                                text: 'Thank you for your order!',
-                                icon: 'success'
-                            }).then(() => {
-                                // Clear cart after successful checkout
-                                localStorage.removeItem('cakeOrder');
-                                updateCart();
-                            });
-                        } else {
-                            Swal.fire({
-                                icon: 'error',
-                                title: 'Checkout Failed',
-                                text: 'There was an issue placing your order. Please try again.'
-                            });
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Error:', error);
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Server Error',
-                            text: 'An error occurred while processing your order.'
-                        });
-                    });
+                    window.location.href = 'checkout.html';
                 }
             });
         }
