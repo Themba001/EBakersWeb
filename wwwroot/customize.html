@@ -1,79 +1,93 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-Bakers | Customize Cake</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <img src="images/Logo.jpeg" alt="E-Bakers Logo" class="logo">
-        <h1>Customize Your Cake</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">&#9679;Menu&#9679;</a></li>
-                <li><a href="seasons.html">Seasons</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="terms.html">Terms & Conditions</a></li>
-                <li><a href="login.html">Admin Login</a></li>
-            </ul>
-        </nav>
+      <img src="images/Logo.jpeg" alt="E-Bakers Logo" class="logo" />
+      <h1>Customize Your Cake</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">&#9679;Menu&#9679;</a></li>
+          <li><a href="seasons.html">Seasons</a></li>
+          <li><a href="cart.html">Cart</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="login.html">Admin Login</a></li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <h2>Customize Your Cake</h2>
-        <form id="customizeForm">
-            <label for="cakeType">Cake Type:</label>
-            <select id="cakeType" name="cakeType" required>
-                <option value="chocolate">Chocolate</option>
-                <option value="vanilla">Vanilla</option>
-                <!-- Add more options as needed -->
-            </select>
+      <h2>Customize Your Cake</h2>
+      <form id="customizeForm">
+        <label for="cakeType">Cake Type:</label>
+        <select id="cakeType" name="cakeType" required>
+          <option value="chocolate">Chocolate</option>
+          <option value="vanilla">Vanilla</option>
+          <!-- Add more options as needed -->
+        </select>
 
-            <label for="design">Design Type:</label>
-            <input type="text" id="design" name="design" placeholder="Enter your design details" required>
+        <label for="design">Design Type:</label>
+        <input
+          type="text"
+          id="design"
+          name="design"
+          placeholder="Enter your design details"
+          required
+        />
 
-            <label for="flavor">Flavor Layers:</label>
-            <select id="flavor" name="flavor" required>
-                <option value="1">1 Layer</option>
-                <option value="2">2 Layers</option>
-                <option value="3">3 Layers</option>
-            </select>
+        <label for="flavor">Flavor Layers:</label>
+        <select id="flavor" name="flavor" required>
+          <option value="1">1 Layer</option>
+          <option value="2">2 Layers</option>
+          <option value="3">3 Layers</option>
+        </select>
 
-            <label for="icing">Icing Type:</label>
-            <select id="icing" name="icing" required>
-                <option value="buttercream">Buttercream</option>
-                <option value="fondant">Fondant</option>
-                <!-- Add more options as needed -->
-            </select>
+        <label for="icing">Icing Type:</label>
+        <select id="icing" name="icing" required>
+          <option value="buttercream">Buttercream</option>
+          <option value="fondant">Fondant</option>
+          <!-- Add more options as needed -->
+        </select>
 
-            <label for="color">Icing Color:</label>
-            <input type="color" id="color" name="color" value="#ffffff">
-            <button type="button" id="colorHelp">?</button> <!-- Help button for color -->
+        <label for="color">Icing Color:</label>
+        <input type="color" id="color" name="color" value="#ffffff" />
+        <button type="button" id="colorHelp">How to use color wheel</button>
+        <!-- Help button for color -->
 
-            <label for="vegan">Vegan Option:</label>
-            <input type="checkbox" id="vegan" name="vegan">
+        <label for="vegan">Vegan Option:</label>
+        <input type="checkbox" id="vegan" name="vegan" />
 
-            <label for="picture">Upload Picture (if any):</label>
-            <input type="file" id="picture" name="picture">
-            <button type="button" id="pictureHelp">?</button> <!-- Help button for picture upload -->
+        <label for="picture">Upload Picture (if any):</label>
+        <input type="file" id="picture" name="picture" />
+        <button type="button" id="pictureHelp">How to upoad a picture</button>
+        <!-- Help button for picture upload -->
 
-            <button type="submit">Submit Customization</button>
-        </form>
+        <button type="submit">Submit Customization</button>
+      </form>
     </main>
     <footer>
-        <p>&copy; 2024 E-Bakers. All rights reserved.</p>
-        <ul class="social-links">
-            <li><a href="#"><img src="images/facebook.jpg" alt="Facebook"></a></li>
-            <li><a href="#"><img src="images/twitter.jpg" alt="Twitter"></a></li>
-            <li><a href="#"><img src="images/instagram.jpg" alt="Instagram"></a></li>
-        </ul>
+      <p>&copy; 2024 E-Bakers. All rights reserved.</p>
+      <ul class="social-links">
+        <li>
+          <a href="#"><img src="images/facebook.jpg" alt="Facebook" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/twitter.jpg" alt="Twitter" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="images/instagram.jpg" alt="Instagram" /></a>
+        </li>
+      </ul>
     </footer>
 
     <script src="js/customize.js"></script>
-</body>
+  </body>
 </html>

@@ -27,7 +27,7 @@
 
     // Prepare order data
     const orderData = {
-        customerID: 1, // Hardcoded for now
+        customerID: 1, 
         firstName,
         surname,
         phone,

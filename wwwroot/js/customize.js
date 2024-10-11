@@ -1,5 +1,6 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('customizeForm').addEventListener('submit', function(e) {
+document.addEventListener('DOMContentLoaded', function () {
+    // Existing form submit logic
+    document.getElementById('customizeForm').addEventListener('submit', function (e) {
         e.preventDefault();  // Prevent form from submitting traditionally
         
         // Capture form data
@@ -58,6 +59,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     window.location.href = 'cart.html';
                 });
             }
+        });
+    });
+
+    
+    document.getElementById('colorHelp').addEventListener('click', function () {
+        Swal.fire({
+            title: 'Color Wheel Help',
+            text: 'Use the color picker to select your desired icing color for the cake. Simply click on the color box to open the color wheel and choose your favorite shade.',
+            icon: 'info',
+            confirmButtonText: 'Got it!'
+        });
+    });
+
+    
+    document.getElementById('pictureHelp').addEventListener('click', function () {
+        Swal.fire({
+            title: 'Picture Upload Help',
+            text: 'You can upload a reference picture for your cake design. Click on the "Choose File" button and select an image from your device (optional).',
+            icon: 'info',
+            confirmButtonText: 'Got it!'
         });
     });
 });
